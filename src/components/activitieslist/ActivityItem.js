@@ -4,9 +4,7 @@ const ActivityItem = ({ activity, id, onClickDelete }) => (
   <p>
     { activity }
     {' '}
-    <button
-      onClick={() => onClickDelete(id)}
-    >
+    <button onClick={() => onClickDelete(id)}>
       Remove
     </button>
   </p>
