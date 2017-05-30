@@ -4,7 +4,6 @@ import FoodList from './components/foodlist/FoodList'
 import Signup from './components/auth/Signup'
 import Login from './components/auth/Login'
 import localforage from 'localforage'
-import logo from './logo.svg'
 import axios from 'axios'
 import './App.css'
 import Home from './components/home/Home'
@@ -51,9 +50,8 @@ class App extends Component {
     return (
       <div className='App'>
         <div className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
 
-          <h2>Welcome to <strike>React</strike> HELL</h2>
+          <h2 id="main-header"><i>DOUSHIO~~</i></h2>
         </div>
         <Router>
           <div>

@@ -13,9 +13,9 @@ class FoodMap extends React.Component {
     this.sendSearchVal = this.sendSearchVal.bind(this)
   }
 
-  componentDidMount() {
-    this.sendSearchVal()
-  }
+  // componentDidMount() {
+  //   this.sendSearchVal()
+  // }
 
   sendSearchVal() {
     const searchVal = this.state.searchForm

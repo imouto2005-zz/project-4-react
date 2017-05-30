@@ -2,23 +2,33 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
-  background-color: #222;
+  background-image: url(./images/rainclouds.png);
   height: 150px;
   padding: 20px;
-  color: white;
+}
+
+#main-header {
+  font-size: 70px;
+  color: #ffadda;
+  font-family: "Fredoka One";
+  margin-top: 35px
 }
 
 .App-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.meetup-items {
+  width: 650px;
+  border: 2px #7bdfc4 double;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 18px;
+  padding: 8px;
+}
+
+p {
+  font-family: "Quicksand"
 }
