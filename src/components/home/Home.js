@@ -1,6 +1,6 @@
 import React from 'react';
 import ActivitiesList from '../activitieslist/ActivitiesList'
-import FoodList from '../foodlist/FoodList'
+import FoodHome from '../foodlist/FoodHome'
 import {
   BrowserRouter as Router,
   Route,
@@ -15,11 +15,10 @@ class Home extends React.Component {
         <Router>
           <div>
             <Link to='/activities' id='link'>Activities | </Link>{' '}
-            <Link to='/food' id='link'>Food</Link>
+            <Link to='/foodhome' id='link'>Food</Link>
 
             <Route path='/activities' component={() => <ActivitiesList />} />
-            <Route path='/food' component={() => <FoodList />} />
-            {/* <Route path='/logout' component={() => <Logout />} /> */}
+            <Route path='/foodhome' component={() => <FoodHome />} />
           </div>
         </Router>
       </div>

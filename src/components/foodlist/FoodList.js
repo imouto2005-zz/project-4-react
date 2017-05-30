@@ -85,7 +85,6 @@ class FoodList extends React.Component {
   }
 
   handleNameInputOnChange (e) {
-    console.log(e.target.value);
     this.setState({ nameInput: e.target.value })
   }
 
@@ -99,7 +98,7 @@ class FoodList extends React.Component {
 
   randPick (e) {
     let randomVal = Math.floor(Math.random() * this.state.foods.length)
-    document.getElementById('chosen-food').innerHTML = this.state.activities[randomVal].name
+    document.getElementById('chosen-food').innerHTML = this.state.foods[randomVal].name
   }
 
   render () {
@@ -112,7 +111,7 @@ class FoodList extends React.Component {
           event.preventDefault()
           addFood()
         }}>
-          <label>Name of food place:</label>
+          <label>Name of food place: (required)</label>
           <input type='text' value={this.state.nameInput} onChange={this.handleNameInputOnChange} /><br /><br />
 
           <label>Cuisine:</label>
@@ -140,7 +139,7 @@ class FoodList extends React.Component {
               })
             }
           <button id='rand-btn' onClick={(e) => this.randPick(e)}> RANDOM SELECT </button>
-          <h2>Your YUM FOOD is:</h2>
+          <h2>You will be eating at:</h2>
           <h3 id='chosen-food' />
         </div>
       </div>
