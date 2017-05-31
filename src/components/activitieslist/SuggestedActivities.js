@@ -44,21 +44,22 @@ class SuggestedActivities extends React.Component {
                 return (
                     <p className="meetup-items">
                     <b><a href={item.link}><span id="meetup-title">{item.name}</span></a></b><br />
-                    <i class="em em-busts_in_silhouette"></i> {item.group.who}<br />
-                    <i class="em em-pushpin"></i> {item.venue.name}, {item.venue.address_1}<br />
+                    <i className="em em-busts_in_silhouette"></i> {item.group.who}<br />
+                    <i className="em em-pushpin"></i> {item.venue.name}, {item.venue.address_1}<br />
                   </p>
                 )
               } else {
                 return (
                     <p className="meetup-items">
-                    <b><a href={item.link}>{item.name}</a></b><br />
-                    <i class="em em-busts_in_silhouette"></i> {item.group.who}<br />
-                    <i class="em em-warning"></i> Please refer to the meetup page for location details!<br />
+                    <b><a href={item.link}><span id="meetup-title">{item.name}</span></a></b><br />
+                    <i className="em em-busts_in_silhouette"></i> {item.group.who}<br />
+                    <i className="em em-warning"></i> Please refer to the meetup page for location details!<br />
                   </p>
                 )
               }
             })
           }
+          <p> <i className="em em-tada"></i> You have reached the end of the page!</p>
         </div>
       </div>
     );

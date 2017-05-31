@@ -113,18 +113,19 @@
 }
 
 #meetup-header {
-  font-family: "Chelsea Market"
+  font-family: "Chelsea Market";
+  color: #fc7999
 }
 
 #meetup-title {
   font-family: "Viga";
-  font-size: 13px;
+  font-size: 15px;
   color: #786ce6
 }
 
 .meetup-items {
-  width: 650px;
-  border: 3px #7bdfc4 double;
+  width: 600px;
+  border: 3px #8cb3ff double;
   border-radius: 5px;
   text-align: center;
   margin: 0 auto;
@@ -132,6 +133,38 @@
   padding: 8px;
 }
 
+#foodmap-header {
+  font-family: "Chelsea Market";
+  color: #6183fa;
+}
+
+#foodmap-input {
+  font-family: 'Poppins';
+  width: 300px;
+  padding: 20px 0px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px;
+  outline: none;
+  color: #6D7781;
+  font-size: 14px;
+}
+
+#foodmap-button {
+  border: none;
+  border-radius: 3px;
+  font-family: "Poppins";
+  width: 100px;
+  background: #6cabff;
+  color: white;
+  outline: none;
+}
+
+#foodmap-item {
+  font-size: 14px;
+}
+
 p {
-  font-family: "Poppins"
+  font-family: "Poppins";
+  font-size: 13px
 }
