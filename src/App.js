@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
 import Signup from './components/auth/Signup'
 import Login from './components/auth/Login'
-import ActivitiesList from './components/activitieslist/ActivitiesList'
 import localforage from 'localforage'
 import axios from 'axios'
 import './App.css'
 import Home from './components/home/Home'
 import { Redirect } from 'react-router'
+import { render } from 'react-dom'
+import { browserHistory } from 'react-router'
 
 import ActivitiesHome from './components/activitieslist/ActivitiesHome'
 import FoodHome from './components/foodlist/FoodHome'
+import ActivitiesList from './components/activitieslist/ActivitiesList'
+import SuggestedActivities from './components/activitieslist/SuggestedActivities'
+import FoodList from './components/foodlist/FoodList'
+import FoodMap from './components/foodlist/FoodMap'
+import Welcome from './components/welcome/Welcome'
 
 import {
   BrowserRouter as Router,
@@ -55,6 +61,7 @@ class App extends Component {
 
           <h2 id="main-header">doushio~?</h2>
         </div>
+
         <Router>
         <div>
           <div className="auth-div">
@@ -73,10 +80,17 @@ class App extends Component {
           <Route exact path='/activitieshome' component={ActivitiesHome} />
           <Route path='/foodhome' render={() => <FoodHome />} />
 
+          <Route path='/' component={() => <Welcome />} />
+
+
+
+
           {/* <Route path='/logout' component={() => <Logout />} /> */}
           </div>
         </div>
+
         </Router>
+
       </div>
     )
   }

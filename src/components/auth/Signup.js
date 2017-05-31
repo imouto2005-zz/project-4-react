@@ -58,7 +58,7 @@ class Signup extends React.Component {
     const { redirect } = this.state
 
     if (redirect) {
-      return <Redirect to='/activities' />
+      return <Redirect to='/home' />
     }
 
     return (
@@ -70,7 +70,7 @@ class Signup extends React.Component {
           signup()
         }}>
           <input autoFocus id="auth-input" type='text' placeholder='Email: ' onChange={this.handleEmailFormOnChange} value={this.state.email} />< br />
-          <input id="auth-input" type='password' placeholder='Password: ' onChange={this.handlePasswordFormOnChange} value={this.state.password} />< br />
+          <input id="auth-input" type='password' placeholder='Password: (min 8 chars) ' onChange={this.handlePasswordFormOnChange} value={this.state.password} />< br />
           <input id="auth-input" type='password' placeholder='Password Confirmation: ' onChange={this.handleConfirmPasswordFormOnChange} value={this.state.confirm_password} />< br />< br />
           <button id="signup-submit">Submit</button>
         </form>

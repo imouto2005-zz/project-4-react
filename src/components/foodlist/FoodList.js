@@ -111,7 +111,7 @@ class FoodList extends React.Component {
           event.preventDefault()
           addFood()
         }}>
-          <input autoFocus id="activity-form" type='text' value={this.state.nameInput} onChange={this.handleNameInputOnChange} placeholder="Where do you like to eat at?"/>
+          <input autoFocus id="activity-form" type='text' value={this.state.nameInput} onChange={this.handleNameInputOnChange} placeholder="Where do you like to eat at? Add it here!"/>
 
           {/* <label>Cuisine:</label>
           <input type='text' value={this.state.cuisineInput} onChange={this.handleCuisineInputOnChange} placeholder='Japanese/Thai/Italian etc' /><br /><br />

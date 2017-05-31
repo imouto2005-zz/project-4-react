@@ -1,6 +1,8 @@
 import React from 'react';
 import ActivitiesHome from '../activitieslist/ActivitiesHome'
 import FoodHome from '../foodlist/FoodHome'
+import SuggestedActivities from '../activitieslist/SuggestedActivities'
+import ActivitiesList from '../activitieslist/ActivitiesList'
 import {
   BrowserRouter as Router,
   Route,
@@ -19,6 +21,7 @@ class Home extends React.Component {
 
             {/* <Route path='/activitieshome' component={() => <ActivitiesHome />} /> */}
             {/* <Route path='/foodhome' component={() => <FoodHome />} /> */}
+          
           </div>
       </div>
     );
