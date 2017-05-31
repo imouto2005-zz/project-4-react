@@ -4,8 +4,8 @@ const ActivityItem = ({ activity, id, onClickDelete }) => (
   <p>
     { activity }
     {' '}
-    <button onClick={() => onClickDelete(id)}>
-      Remove
+    <button id="remove-button" onClick={() => onClickDelete(id)}>
+      <i className="em em-negative_squared_cross_mark"></i>
     </button>
   </p>
 );

@@ -16,6 +16,10 @@
   text-shadow: 4px 0 0 #fff, -4px 0 0 #fff, 0 4px 0 #fff, 0 -4px 0 #fff, 4px 4px #fff, -4px -4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff;
 }
 
+.auth-div {
+  margin-top: 10px;
+}
+
 #auth-input {
   font-family: 'Poppins';
 	width: 300px;
@@ -133,6 +137,28 @@
   padding: 8px;
 }
 
+.activity-suggestions {
+  width: 600px;
+  margin: 0 auto;
+  border: 1px black solid;
+  border-radius: 5px;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 14px;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+#suggestion-title {
+  font-family: "Viga";
+  font-size: 20px;
+  color: #cda1ff
+}
+
 #foodmap-header {
   font-family: "Chelsea Market";
   color: #6183fa;
@@ -162,6 +188,75 @@
 
 #foodmap-item {
   font-size: 14px;
+}
+
+#try-new {
+  border: none;
+  border-radius: 3px;
+  font-family: "Poppins";
+  width: 300px;
+  height: 40px;
+  background: #2ddba7;
+  color: white;
+  outline: none;
+  font-size: 13px;
+}
+
+#try-new:hover {
+  background: #00cca1
+}
+
+#no-try {
+  border: none;
+  border-radius: 3px;
+  font-family: "Poppins";
+  width: 300px;
+  height: 40px;
+  background: #f25571;
+  color: white;
+  outline: none;
+  font-size: 13px;
+}
+
+#no-try:hover {
+  background: #ff5dab
+}
+
+#activity-list-header {
+  font-family: "Chelsea Market";
+  font-size: 40px;
+  color: #9881F5
+}
+
+#activity-form {
+  font-family: 'Poppins';
+  width: 500px;
+  padding: 20px 0px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px;
+  outline: none;
+  color: #6D7781;
+  font-size: 14px;
+}
+
+#add-activity {
+  border: none;
+  border-radius: 3px;
+  font-family: "Poppins";
+  width: 100px;
+  background: #9881F5;
+  color: white;
+  outline: none;
+}
+
+#remove-button {
+  border: none;
+  border-radius: 3px;
+  background: white;
+  width: 20px;
+  font-family: "Poppins";
+  outline: none;
 }
 
 p {

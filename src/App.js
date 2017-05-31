@@ -57,7 +57,7 @@ class App extends Component {
         </div>
         <Router>
         <div>
-          <div>
+          <div className="auth-div">
           { redirectLogout && <Redirect to='/login' /> }
           <Link to='/login' id='link'><button id="auth-button">Login</button></Link>{' '}
           <Link to='/signup' id='link'><button id="auth-button">Sign Up</button></Link>{' '}

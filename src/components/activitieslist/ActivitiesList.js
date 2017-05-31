@@ -83,13 +83,23 @@ class ActivitiesList extends React.Component {
     const removeActivity = this.removeActivity
     return (
       <div className='activity-list'>
-        <h2>YOUR FUN ACTIVITIES</h2>
+        <h2 id="activity-list-header"><i className="em em-confetti_ball"></i> YOUR FUN ACTIVITIES <i className="em em-confetti_ball"></i></h2>
+        <center><div className='activity-suggestions'>
+        <span id="suggestion-title">Not sure where to begin? Here is a list of sample activities!</span> <br />
+        <ul>
+          <li> Try out a new recipe from the internet </li>
+          <li> Catch an Omnimax show at the Science Centre </li>
+          <li> Build a website (for educational purposes - you know you want to!) </li>
+          <li> Marathon all 7 Harry Potter movies in one day </li>
+          <li> Visit Mustafa mall and buy things you never knew you needed </li>
+        </ul>
+        </div></center>
         <form onSubmit={(event) => {
           event.preventDefault()
           addActivity()
         }}>
-          <input type='text' value={this.state.activityForm} onChange={this.handleActivityFormOnChange} placeholder='Add your own fun activity here!' />
-          <button>Submit</button>
+          <input autoFocus id="activity-form" type='text' value={this.state.activityForm} onChange={this.handleActivityFormOnChange} placeholder='Add your own fun activity here!' />
+          <button id="add-activity">Submit</button>
         </form>
 
         <div className='activities'>
