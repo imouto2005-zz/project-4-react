@@ -9,14 +9,99 @@
 }
 
 #main-header {
-  font-size: 70px;
+  font-size: 50px;
   color: #ffadda;
-  font-family: "Fredoka One";
-  margin-top: 35px
+  font-family: "Chelsea Market";
+  margin-top: 35px;
+  text-shadow: 4px 0 0 #fff, -4px 0 0 #fff, 0 4px 0 #fff, 0 -4px 0 #fff, 4px 4px #fff, -4px -4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff;
 }
 
-.App-intro {
-  font-size: large;
+#auth-input {
+  font-family: 'Poppins';
+	width: 300px;
+	padding: 20px 0px;
+	background: transparent;
+	border: 0;
+	outline: none;
+	color: #6D7781;
+	font-size: 14px;
+}
+
+#auth-button {
+  border: none;
+  border-radius: 3px;
+  font-family: "Poppins";
+  width: 100px;
+  background: #9881F5;
+  color: white;
+}
+
+#login-header {
+  font-family: "Chelsea Market";
+  font-size: 50px;
+  color: #20d7ff;
+}
+
+#login-submit {
+	background: #99CCFF;
+	border: 2px #CAE5FF solid;
+	width: 300px;
+	height: 40px;
+	border-radius: 5px;
+	color: #fff;
+  font-family: 'Poppins';
+	font-size: 14px;
+}
+
+#login-submit:hover {
+  background: #20d7ff;
+}
+
+.signup-div {
+  margin-bottom: 50px;
+}
+
+#signup-header {
+  font-family: "Chelsea Market";
+  font-size: 50px;
+  color: #87E293;
+}
+
+#signup-submit {
+	background: #87E293;
+	border: 2px #AFEAAA solid;
+	width: 300px;
+	height: 40px;
+	border-radius: 5px;
+	color: #fff;
+  font-family: 'Poppins';
+	font-size: 14px;
+}
+
+#signup-submit:hover {
+  background: #1dc18b
+}
+
+#activity-home {
+  width: 500px;
+  height: 300px;
+  font-family: "Chelsea Market";
+  font-size: 30px;
+  border: none;
+  border-radius: 7px;
+  background: url(http://68.media.tumblr.com/569b920dbdc5b91b206632e91098d086/tumblr_oqo9xrHXJO1qhy6c9o1_500.png);
+  background-repeat: repeat;
+}
+
+#food-home {
+  width: 500px;
+  height: 300px;
+  font-family: "Chelsea Market";
+  font-size: 30px;
+  border: none;
+  border-radius: 7px;
+  background: url(http://68.media.tumblr.com/569b920dbdc5b91b206632e91098d086/tumblr_oqo9xrHXJO1qhy6c9o1_500.png);
+  background-repeat: repeat;
 }
 
 .meetup-items {
@@ -30,5 +115,5 @@
 }
 
 p {
-  font-family: "Quicksand"
+  font-family: "Poppins"
 }

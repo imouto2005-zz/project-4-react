@@ -51,14 +51,14 @@ class App extends Component {
       <div className='App'>
         <div className='App-header'>
 
-          <h2 id="main-header"><i>DOUSHIO~~</i></h2>
+          <h2 id="main-header">doushio~?</h2>
         </div>
         <Router>
           <div>
             { redirect && <Redirect to='/login' /> }
-            <Link to='/login' id='link'>Login | </Link>{' '}
-            <Link to='/signup' id='link'>Sign Up |</Link>{' '}
-            <button onClick={(e) => this.logout(e)}> Log Out </button>
+            <Link to='/login' id='link'><button id="auth-button">Login</button></Link>{' '}
+            <Link to='/signup' id='link'><button id="auth-button">Sign Up</button></Link>{' '}
+            <button id="auth-button" onClick={(e) => this.logout(e)}> Log Out </button>
             <br /> <br />
 
             <Route path='/login' component={() => <Login />} />

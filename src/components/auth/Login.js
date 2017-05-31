@@ -58,18 +58,18 @@ class Login extends React.Component {
 
     return (
       <div>
-        <h2>Login</h2>
+        <h2 id="login-header">Welcome back!</h2>
+        <img src="http://i.imgur.com/eXvFve8.png" />
         <form onSubmit={(event) => {
           event.preventDefault()
           login()
         }}>
-          <label>Email:</label>
-          <input type='text' onChange={this.handleEmailFormOnChange} value={this.state.email} placeholder='Email' />< br />
 
-          <label>Password:</label>
-          <input type='password' onChange={this.handlePasswordFormOnChange} value={this.state.password} placeholder='Password' />< br />< br />
+          <input id="auth-input" autoFocus type='text' onChange={this.handleEmailFormOnChange} value={this.state.email} placeholder='Email: ' />< br />
 
-          <button>Submit</button>
+          <input id="auth-input" type='password' onChange={this.handlePasswordFormOnChange} value={this.state.password} placeholder='Password: ' />< br />< br />
+
+          <button id="login-submit">Submit</button>
         </form>
       </div>
     )

@@ -14,8 +14,8 @@ class Home extends React.Component {
       <div>
         <Router>
           <div>
-            <Link to='/activitieshome' id='link'>Activities | </Link>{' '}
-            <Link to='/foodhome' id='link'>Food</Link>
+            <Link to='/activitieshome' id='link'><button id="activity-home">WHAT TO DO?</button></Link>
+            <Link to='/foodhome' id='link'><button id="food-home">WHERE TO EAT?</button></Link>
 
             <Route path='/activitieshome' component={() => <ActivitiesHome />} />
             <Route path='/foodhome' component={() => <FoodHome />} />

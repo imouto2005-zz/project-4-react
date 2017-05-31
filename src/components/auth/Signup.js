@@ -62,19 +62,17 @@ class Signup extends React.Component {
     }
 
     return (
-      <div>
-        <h2>Sign Up</h2>
+      <div className="signup-div">
+        <h2 id="signup-header">Yay! Sign Up!</h2>
+        <img src="http://i.imgur.com/4C3IO96.png" />
         <form onSubmit={(event) => {
           event.preventDefault()
           signup()
         }}>
-          <label>Email:</label>
-          <input type='text' placeholder='Email' onChange={this.handleEmailFormOnChange} value={this.state.email} />< br />
-          <label>Password:</label>
-          <input type='password' placeholder='Password' onChange={this.handlePasswordFormOnChange} value={this.state.password} />< br />
-          <label>Password Confirmation:</label>
-          <input type='password' placeholder='Password Confirmation' onChange={this.handleConfirmPasswordFormOnChange} value={this.state.confirm_password} />< br />< br />
-          <button>Submit</button>
+          <input autoFocus id="auth-input" type='text' placeholder='Email: ' onChange={this.handleEmailFormOnChange} value={this.state.email} />< br />
+          <input id="auth-input" type='password' placeholder='Password: ' onChange={this.handlePasswordFormOnChange} value={this.state.password} />< br />
+          <input id="auth-input" type='password' placeholder='Password Confirmation: ' onChange={this.handleConfirmPasswordFormOnChange} value={this.state.confirm_password} />< br />< br />
+          <button id="signup-submit">Submit</button>
         </form>
       </div>
     )
