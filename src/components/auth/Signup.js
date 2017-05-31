@@ -62,7 +62,7 @@ class Signup extends React.Component {
     }
 
     return (
-      <div className="signup-div">
+      <div className="auth-div">
         <h2 id="signup-header">Yay! Sign Up!</h2>
         <img src="http://i.imgur.com/4C3IO96.png" />
         <form onSubmit={(event) => {

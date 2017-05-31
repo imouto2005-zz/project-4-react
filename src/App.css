@@ -34,11 +34,12 @@
   width: 100px;
   background: #9881F5;
   color: white;
+  outline: none;
 }
 
 #login-header {
   font-family: "Chelsea Market";
-  font-size: 50px;
+  font-size: 40px;
   color: #20d7ff;
 }
 
@@ -51,19 +52,20 @@
 	color: #fff;
   font-family: 'Poppins';
 	font-size: 14px;
+  outline: none;
 }
 
 #login-submit:hover {
   background: #20d7ff;
 }
 
-.signup-div {
+.auth-div {
   margin-bottom: 50px;
 }
 
 #signup-header {
   font-family: "Chelsea Market";
-  font-size: 50px;
+  font-size: 40px;
   color: #87E293;
 }
 
@@ -76,6 +78,7 @@
 	color: #fff;
   font-family: 'Poppins';
 	font-size: 14px;
+  outline: none;
 }
 
 #signup-submit:hover {
@@ -85,28 +88,43 @@
 #activity-home {
   width: 500px;
   height: 300px;
+  outline: none;
   font-family: "Chelsea Market";
-  font-size: 30px;
+  font-size: 40px;
+  text-shadow: 4px 0 0 #fff, -4px 0 0 #fff, 0 4px 0 #fff, 0 -4px 0 #fff, 4px 4px #fff, -4px -4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff;
   border: none;
   border-radius: 7px;
-  background: url(http://68.media.tumblr.com/569b920dbdc5b91b206632e91098d086/tumblr_oqo9xrHXJO1qhy6c9o1_500.png);
+  background: url(https://img.elo7.com.br/product/zoom/C1C68E/papel-de-parede-4512ef-papel-de-parede-teen.jpg);
   background-repeat: repeat;
+  margin-right: 8px;
 }
 
 #food-home {
   width: 500px;
   height: 300px;
+  outline: none;
   font-family: "Chelsea Market";
-  font-size: 30px;
+  font-size: 40px;
+  text-shadow: 4px 0 0 #fff, -4px 0 0 #fff, 0 4px 0 #fff, 0 -4px 0 #fff, 4px 4px #fff, -4px -4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff;
   border: none;
   border-radius: 7px;
   background: url(http://68.media.tumblr.com/569b920dbdc5b91b206632e91098d086/tumblr_oqo9xrHXJO1qhy6c9o1_500.png);
   background-repeat: repeat;
 }
 
+#meetup-header {
+  font-family: "Chelsea Market"
+}
+
+#meetup-title {
+  font-family: "Viga";
+  font-size: 13px;
+  color: #786ce6
+}
+
 .meetup-items {
   width: 650px;
-  border: 2px #7bdfc4 double;
+  border: 3px #7bdfc4 double;
   border-radius: 5px;
   text-align: center;
   margin: 0 auto;

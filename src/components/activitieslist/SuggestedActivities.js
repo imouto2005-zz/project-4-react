@@ -36,24 +36,24 @@ class SuggestedActivities extends React.Component {
 
     return (
       <div>
-        <h2>COOL EVENTS HERE:</h2>
+        <h2 id="meetup-header">Join a cool event here!</h2>
         <div className="meetup-results">
           {
             this.state.results.map((item) => {
               if (item.venue) {
                 return (
                     <p className="meetup-items">
-                    <b><a href={item.link}>{item.name}</a></b><br />
-                    Organized by: {item.group.who}<br />
-                    Location: {item.venue.name}, {item.venue.address_1}<br />
+                    <b><a href={item.link}><span id="meetup-title">{item.name}</span></a></b><br />
+                    <i class="em em-busts_in_silhouette"></i> {item.group.who}<br />
+                    <i class="em em-pushpin"></i> {item.venue.name}, {item.venue.address_1}<br />
                   </p>
                 )
               } else {
                 return (
                     <p className="meetup-items">
                     <b><a href={item.link}>{item.name}</a></b><br />
-                    Organized by: {item.group.who}<br />
-                    Please refer to the meetup page for location details!<br />
+                    <i class="em em-busts_in_silhouette"></i> {item.group.who}<br />
+                    <i class="em em-warning"></i> Please refer to the meetup page for location details!<br />
                   </p>
                 )
               }

@@ -57,7 +57,7 @@ class Login extends React.Component {
      }
 
     return (
-      <div>
+      <div className="auth-div">
         <h2 id="login-header">Welcome back!</h2>
         <img src="http://i.imgur.com/eXvFve8.png" />
         <form onSubmit={(event) => {
