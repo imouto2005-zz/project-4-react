@@ -106,21 +106,20 @@ class FoodList extends React.Component {
     const removeFood = this.removeFood
     return (
       <div className='food-list'>
-        <h2>YUMZ FOOD</h2>
+        <h2 id="food-header"><i className="em em-fork_and_knife"></i>All your favourite dining spots!<i className="em em-pizza"></i></h2>
         <form onSubmit={(event) => {
           event.preventDefault()
           addFood()
         }}>
-          <label>Name of food place: (required)</label>
-          <input type='text' value={this.state.nameInput} onChange={this.handleNameInputOnChange} /><br /><br />
+          <input autoFocus id="activity-form" type='text' value={this.state.nameInput} onChange={this.handleNameInputOnChange} placeholder="Where do you like to eat at?"/>
 
-          <label>Cuisine:</label>
+          {/* <label>Cuisine:</label>
           <input type='text' value={this.state.cuisineInput} onChange={this.handleCuisineInputOnChange} placeholder='Japanese/Thai/Italian etc' /><br /><br />
 
           <label>Type of place:</label>
-          <input type='text' value={this.state.placeInput} onChange={this.handlePlaceInputOnChange} placeholder='Restaurant/Cafe/Hawker Centre etc' /><br /><br />
+          <input type='text' value={this.state.placeInput} onChange={this.handlePlaceInputOnChange} placeholder='Restaurant/Cafe/Hawker Centre etc' /><br /><br /> */}
 
-          <button>Submit</button><br />
+          <button id="food-submit">Submit</button><br />
         </form>
 
         <div className='activities'>
@@ -139,7 +138,7 @@ class FoodList extends React.Component {
               })
             }
           <button id='rand-btn' onClick={(e) => this.randPick(e)}> RANDOM SELECT </button>
-          <h2>You will be eating at:</h2>
+          <h2 id="food-header-2">You will be eating at:</h2>
           <h3 id='chosen-food' />
         </div>
       </div>

@@ -203,7 +203,7 @@ ul {
 }
 
 #try-new:hover {
-  background: #00cca1
+  background: #29da7b
 }
 
 #no-try {
@@ -222,10 +222,21 @@ ul {
   background: #ff5dab
 }
 
+#rand-btn {
+  border: none;
+  border-radius: 3px;
+  font-family: "Poppins";
+  width: 200px;
+  background: #d4005f;
+  color: white;
+  outline: none;
+  font-size: 13px;
+}
+
 #activity-list-header {
   font-family: "Chelsea Market";
-  font-size: 40px;
-  color: #9881F5
+  font-size: 38px;
+  color: #edaaf6;
 }
 
 #activity-form {
@@ -257,6 +268,54 @@ ul {
   width: 20px;
   font-family: "Poppins";
   outline: none;
+}
+
+#activity-header-2 {
+  font-family: "Chelsea Market";
+  font-size: 25px;
+  color: #ddbaf6;
+}
+
+#chosen-activity {
+  font-family: "Viga";
+  background: #bddaf6;
+  color: #9881F5;
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+#food-header {
+  font-family: "Chelsea Market";
+  font-size: 28px;
+  color: #70FF63;
+  margin-top: 30px;
+}
+
+#food-submit {
+  border: none;
+  border-radius: 3px;
+  font-family: "Poppins";
+  width: 100px;
+  background: #41CF4D;
+  color: white;
+  outline: none;
+  font-size: 13px;
+}
+
+#food-header-2 {
+  font-family: "Chelsea Market";
+  font-size: 25px;
+  color: #2ddba7;
+}
+
+#chosen-food {
+  font-family: "Viga";
+  background: #fcff63;
+  /*color: #55A72F;*/
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 p {

@@ -92,6 +92,7 @@ class ActivitiesList extends React.Component {
           <li> Build a website (for educational purposes - you know you want to!) </li>
           <li> Marathon all 7 Harry Potter movies in one day </li>
           <li> Visit Mustafa mall and buy things you never knew you needed </li>
+          <li> AND SO MUCH MORE! </li>
         </ul>
         </div></center>
         <form onSubmit={(event) => {
@@ -116,7 +117,7 @@ class ActivitiesList extends React.Component {
               })
             }
               <button id="rand-btn" onClick={(e) => this.randPick(e)}> RANDOM SELECT </button>
-              <h2>Your fun activity is:</h2>
+              <h2 id="activity-header-2">Your fun and RANDOMLY SELECTED activity is:</h2>
               <h3 id="chosen-activity"></h3>
         </div>
       </div>
