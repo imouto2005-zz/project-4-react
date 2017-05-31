@@ -36,7 +36,7 @@ class SuggestedActivities extends React.Component {
 
     return (
       <div>
-        <h2 id="meetup-header">Join a cool event here!</h2>
+        <h2 id="meetup-header"><i className="em em-sparkles"></i> Join a cool event here! <i className="em em-sparkles"></i></h2>
         <div className="meetup-results">
           {
             this.state.results.map((item) => {

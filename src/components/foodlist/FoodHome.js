@@ -14,8 +14,8 @@ class FoodHome extends React.Component {
       <div>
         <Router>
           <div>
-            <Link to='/foodmap' id='link'>Try something new! | </Link>{' '}
-            <Link to='/food' id='link'>Safe choices ftw</Link>
+            <Link to='/foodmap' id='link'><button>Try something new!</button></Link>{' '}
+            <Link to='/food' id='link'><button>Safe choices ftw</button></Link>
 
             <Route path='/foodmap' component={() => <FoodMap />} />
             <Route path='/food' component={() => <FoodList />} />
