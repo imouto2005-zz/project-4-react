@@ -14,6 +14,7 @@ class ActivitiesHome extends React.Component {
       <div>
         <Router>
           <div>
+          <Link to='/home' id='Link'><button id="home-button"><i className="em em-house"></i></button></Link><br /><br />
             <Link to='/suggestedactivities' id='link'><button id="try-new">I want to go out and meet new people!</button></Link>{' '}
             <Link to='/activities' id='link'><button id="no-try">Stick to my usual activities</button></Link>
 

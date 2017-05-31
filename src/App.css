@@ -89,6 +89,18 @@
   background: #1dc18b
 }
 
+#home-button {
+  background: white;
+	border: none;
+	width: 200px;
+	/*height: 40px;*/
+	border-radius: 5px;
+	/*color: #fff;*/
+  font-family: 'Poppins';
+	font-size: 28px;
+  outline: none;
+}
+
 #activity-home {
   width: 500px;
   height: 300px;
