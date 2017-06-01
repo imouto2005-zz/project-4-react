@@ -9,7 +9,7 @@ class Login extends React.Component {
     this.state = {
       email: '',
       password: '',
-      redirect: false
+      redirect: this.props.redirectLogin
     }
     this.handleEmailFormOnChange = this.handleEmailFormOnChange.bind(this)
     this.handlePasswordFormOnChange = this.handlePasswordFormOnChange.bind(this)
@@ -32,20 +32,20 @@ class Login extends React.Component {
         'token-type': response.headers['token-type']
       }))
     })
-    .then(() => this.setState({ redirect: true }))
-    .then(() => {this.props.changeLogin()})
+    .then(() => {
+      console.log('in login', this)
+      this.props.changeLogin()
+    })
     .catch(function (error) {
-      console.log(error)
+      // console.log(error)
     })
   }
 
   handleEmailFormOnChange (e) {
-    // console.log(e.target.value);
     this.setState({ email: e.target.value })
   }
 
   handlePasswordFormOnChange (e) {
-    // console.log(e.target.value);
     this.setState({ password: e.target.value })
   }
 
@@ -55,10 +55,6 @@ class Login extends React.Component {
 
      if (redirect) {
        return <Redirect to='/home' />
-     }
-
-     if (localforage.getItem('appName')) {
-       <Redirect to='/home' />
      }
 
     return (

@@ -2,6 +2,7 @@ import React from 'react';
 import FoodMap from './FoodMap'
 import FoodList from './FoodList'
 import Home from '../home/Home'
+import { Redirect } from 'react-router'
 import {
   BrowserRouter as Router,
   Route,
@@ -11,6 +12,10 @@ import {
 class FoodHome extends React.Component {
 
   render() {
+    if (this.props.logout) {
+      return <Redirect to='/login' />
+    }
+
     return (
       <div>
       <Link to='/home' id='Link'><button id="home-button"><i className="em em-house"></i></button></Link><br /><br />

@@ -56,7 +56,7 @@ class FoodMap extends React.Component {
                     <p id="foodmap-item">
                     <span id="foodmap-title">{item.name}</span> <br />
                     <i className="em em-pushpin"></i>{' '}{item.formatted_address} <br />
-                    {item.rating}{' '}<i className="em em-star"></i>
+                  { item.rating && <div>{item.rating} <i className="em em-star"></i></div>}
                   </p>
                 )
             })

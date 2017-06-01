@@ -12,7 +12,14 @@ import {
 
 class Home extends React.Component {
 
+
+
   render() {
+
+    if (this.props.logout) {
+      return <Redirect to='/login' />
+    }
+
     return (
       <div>
           <div>
@@ -21,7 +28,7 @@ class Home extends React.Component {
 
             {/* <Route path='/activitieshome' component={() => <ActivitiesHome />} /> */}
             {/* <Route path='/foodhome' component={() => <FoodHome />} /> */}
-          
+
           </div>
       </div>
     );

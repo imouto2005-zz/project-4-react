@@ -1,6 +1,7 @@
 import React from 'react';
 import SuggestedActivities from './SuggestedActivities'
 import ActivitiesList from './ActivitiesList'
+import { Redirect } from 'react-router'
 import {
   BrowserRouter as Router,
   Route,
@@ -10,6 +11,11 @@ import {
 class ActivitiesHome extends React.Component {
 
   render() {
+
+    if (this.props.logout) {
+      return <Redirect to='/login' />
+    }
+
     return (
       <div>
       <Link to='/home' id='Link'><button id="home-button"><i className="em em-house"></i></button></Link><br /><br />

@@ -28,14 +28,16 @@ class App extends Component {
     super(props);
     this.state = {
       redirectLogout: false,
-      logout: true
+      logout: true,
+      redirectLogin: false
     }
     this.logout = this.logout.bind(this)
   }
 
   changeLogin() {
     this.setState({
-      logout: false
+      logout: false,
+      redirectLogin: true
     })
   }
 
@@ -54,7 +56,8 @@ class App extends Component {
       localforage.removeItem('appName')
       console.log('logged out')
       this.setState({
-        logout: true
+        logout: true,
+        redirectLogin: false
       })
 
 
@@ -66,6 +69,19 @@ class App extends Component {
     })
   }
 
+  componentWillMount(){
+    localforage.getItem('appName')
+    .then((authInfo) => {
+      console.log('componentWillMount',authInfo )
+      if (authInfo) {
+        this.setState({
+          logout: false
+
+        })
+      }
+    })
+  }
+
   render () {
     const { redirectLogout } = this.state
     console.log(localforage.getItem('appName'))
@@ -73,7 +89,6 @@ class App extends Component {
     return (
       <div className='App'>
         <div className='App-header'>
-
           <h2 id="main-header">doushio~?</h2>
         </div>
 
@@ -83,33 +98,37 @@ class App extends Component {
 
           { this.state.logout &&
           <div>
-          <Link to='/login' id='link'><button id="auth-button-login">Login</button></Link>
-          <Link to='/signup' id='link'><button id="auth-button">Sign Up</button></Link><br />
+            <Link to='/login' id='link'><button id="auth-button-login">Login</button></Link>
+            <Link to='/signup' id='link'><button id="auth-button">Sign Up</button></Link><br />
           </div>
+
+            // Redirect /home, /activitieshome, /activities, /suggestedactivities,
+            // /foodhome, /foodmap, /food to /login
           }
 
           { this.state.logout == false &&
-          <div class="logout">
-          <button id="auth-button-logout" onClick={(e) => this.logout(e)}> Log Out </button>
+          <div className="logout">
+            <button id="auth-button-logout" onClick={(e) => this.logout(e)}> Log Out </button>
+            <Redirect to='/home'/>
           </div>
+          // Redirect /login, /signup to /home
           }
           <br /><br />
 
           <div>
-          <Route path='/login' component={() => <Login changeLogin= {() => this.changeLogin().bind(this) } />} />
+          <Route path='/login' component={() => <Login changeLogin= {() => this.changeLogin().bind(this)} />} />
           <Route path='/signup' component={() => <Signup changeLogin= {() => this.changeLogin().bind(this)} />} />
-          <Route exact path='/home' component={Home} />
+          <Route exact path='/home' component={() => <Home logout={this.state.logout} /> } />
+          </div>
 
-          {/* <Route path='/activitieshome' render={() => <ActivitiesHome />} /> */}
-          <Route path='/activitieshome' component={ActivitiesHome} />
-          <Route path='/foodhome' render={() => <FoodHome />} />
+          <div>
+          <Route path='/activitieshome' component={() => <ActivitiesHome logout={this.state.logout} /> } />
+          <Route path='/foodhome' component={() => <FoodHome logout={this.state.logout} />} />
+          </div>
 
           <Route exact path='/' render={() => <Welcome />} />
           </div>
-        </div>
-
         </Router>
-
       </div>
     )
   }
