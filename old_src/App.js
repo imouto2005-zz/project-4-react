@@ -28,7 +28,7 @@ class App extends Component {
     super(props);
     this.state = {
       redirectLogout: false,
-      logout: null,
+      logout: true,
       redirectLogin: false
     }
     this.logout = this.logout.bind(this)
@@ -46,11 +46,10 @@ class App extends Component {
     localforage.getItem('appName')
     .then((authInfo) => {
       console.log('logout',authInfo )
-      const headers = typeof authInfo === "string" ? JSON.parse(authInfo) : authInfo
       return axios({
         method: 'DELETE',
-        url: 'https://project4backend.herokuapp.com/auth/sign_out',
-        headers,
+        url: 'http://project4backend.herokuapp.com/auth/sign_out',
+        headers: JSON.parse(authInfo)
       })
     })
     .then(() => {
@@ -78,10 +77,6 @@ class App extends Component {
         this.setState({
           logout: false
 
-        })
-      } else {
-        this.setState({
-          logout: true
         })
       }
     })
@@ -111,9 +106,10 @@ class App extends Component {
             // /foodhome, /foodmap, /food to /login
           }
 
-          { this.state.logout === false &&
+          { this.state.logout == false &&
           <div className="logout">
             <button id="auth-button-logout" onClick={(e) => this.logout(e)}> Log Out </button>
+            <Redirect to='/home'/>
           </div>
           // Redirect /login, /signup to /home
           }
@@ -127,11 +123,7 @@ class App extends Component {
 
           <div>
           <Route path='/activitieshome' component={() => <ActivitiesHome logout={this.state.logout} /> } />
-          <Route path='/activities' component={() => <ActivitiesHome logout={this.state.logout} />} />
-          <Route path='/suggestedactivities' component={() => <ActivitiesHome logout={this.state.logout} />} />
-          <Route path='/food' component={() => <FoodHome logout={this.state.logout} />} />
           <Route path='/foodhome' component={() => <FoodHome logout={this.state.logout} />} />
-          <Route path='/foodmap' component={() => <FoodHome logout={this.state.logout} />} />
           </div>
 
           <Route exact path='/' render={() => <Welcome />} />

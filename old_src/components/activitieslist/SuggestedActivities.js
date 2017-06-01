@@ -18,11 +18,10 @@ class SuggestedActivities extends React.Component {
     console.log('GETTING MEETUPS!!');
     localforage.getItem('appName')
     .then((authInfo) => {
-      const headers = typeof authInfo === "string" ? JSON.parse(authInfo) : authInfo
       return axios({
         method: 'GET',
-        url: 'https://project4backend.herokuapp.com/activities/meetups',
-        headers,
+        url: 'http://project4backend.herokuapp.com/activities/meetups',
+        headers: JSON.parse(authInfo)
       }).then((response) => {
         console.log('response here', response)
         this.setState({

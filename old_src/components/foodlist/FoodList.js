@@ -28,11 +28,10 @@ class FoodList extends React.Component {
   fetchFoods () {
     localforage.getItem('appName')
     .then((authInfo) => {
-      const headers = typeof authInfo === "string" ? JSON.parse(authInfo) : authInfo
       return axios({
         method: 'GET',
-        url: 'https://project4backend.herokuapp.com/foods',
-        headers,
+        url: 'http://project4backend.herokuapp.com/foods',
+        headers: JSON.parse(authInfo)
       })
     }).then((response) => {
       console.log(`fetch food response: ${response}`)
@@ -46,11 +45,10 @@ class FoodList extends React.Component {
     const newPlace = this.state.placeInput
     localforage.getItem('appName')
     .then((authInfo) => {
-      const headers = typeof authInfo === "string" ? JSON.parse(authInfo) : authInfo
       return axios({
         method: 'POST',
-        url: 'https://project4backend.herokuapp.com/foods',
-        headers,
+        url: 'http://project4backend.herokuapp.com/foods',
+        headers: JSON.parse(authInfo),
         data: {
           name: newName,
           cuisine: newCuisine,
@@ -71,15 +69,14 @@ class FoodList extends React.Component {
 
   removeFood (id) {
     console.log(`we are gonna delete this food ${id}`)
-    let url = 'https://project4backend.herokuapp.com/foods/' + id
+    let url = 'http://project4backend.herokuapp.com/foods/' + id
     console.log(url)
     localforage.getItem('appName')
     .then((authInfo) => {
-      const headers = typeof authInfo === "string" ? JSON.parse(authInfo) : authInfo
       return axios({
         method: 'DELETE',
         url: url,
-        headers,
+        headers: JSON.parse(authInfo)
       })
     })
     .then((response) => {

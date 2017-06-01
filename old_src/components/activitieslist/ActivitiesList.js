@@ -23,11 +23,10 @@ class ActivitiesList extends React.Component {
   fetchActivities () {
     localforage.getItem('appName')
     .then((authInfo) => {
-      const headers = typeof authInfo === "string" ? JSON.parse(authInfo) : authInfo
       return axios({
         method: 'GET',
-        url: 'https://project4backend.herokuapp.com/activities',
-        headers,
+        url: 'http://project4backend.herokuapp.com/activities',
+        headers: JSON.parse(authInfo)
       })
     }).then((response) => {
       console.log(response)
@@ -39,11 +38,10 @@ class ActivitiesList extends React.Component {
     const newactivity = this.state.activityForm
     localforage.getItem('appName')
     .then((authInfo) => {
-      const headers = typeof authInfo === "string" ? JSON.parse(authInfo) : authInfo
       return axios({
         method: 'POST',
-        url: 'https://project4backend.herokuapp.com/activities',
-        headers,
+        url: 'http://project4backend.herokuapp.com/activities',
+        headers: JSON.parse(authInfo),
         data: { data: newactivity }
       })
     }).then((response) => {
@@ -55,15 +53,14 @@ class ActivitiesList extends React.Component {
 
   removeActivity(id) {
     console.log(`we are gonna delete this item ${id}`)
-    let url = 'https://project4backend.herokuapp.com/activities/' + id
+    let url = 'http://project4backend.herokuapp.com/activities/' + id
     console.log(url);
     localforage.getItem('appName')
     .then((authInfo) => {
-      const headers = typeof authInfo === "string" ? JSON.parse(authInfo) : authInfo
       return axios({
         method: 'DELETE',
         url: url,
-        headers,
+        headers: JSON.parse(authInfo)
       })
     })
     .then((response) => {

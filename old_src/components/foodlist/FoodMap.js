@@ -17,11 +17,10 @@ class FoodMap extends React.Component {
     const searchVal = this.state.searchForm
     localforage.getItem('appName')
     .then((authInfo) => {
-      const headers = typeof authInfo === "string" ? JSON.parse(authInfo) : authInfo
       return axios({
         method: 'GET',
-        url: 'https://project4backend.herokuapp.com/foods/search',
-        headers,
+        url: 'http://project4backend.herokuapp.com/foods/search',
+        headers: JSON.parse(authInfo),
         params: { location: searchVal }
       })
     }).then((response) => {
