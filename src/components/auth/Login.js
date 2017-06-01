@@ -20,7 +20,7 @@ class Login extends React.Component {
     const {
       email, password
     } = this.state
-    axios.post('http://localhost:3000/auth/sign_in', {
+    axios.post('http://project4backend.herokuapp.com/auth/sign_in', {
       email, password
     })
     .then(function (response) {

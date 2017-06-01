@@ -23,7 +23,7 @@ class Signup extends React.Component {
       email, password, confirm_password
     } = this.state
 
-    axios.post('http://localhost:3000/auth', {
+    axios.post('http://project4backend.herokuapp.com/auth', {
       email, password, confirm_password
     })
     .then(function (response) {

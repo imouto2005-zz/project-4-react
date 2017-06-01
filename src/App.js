@@ -48,7 +48,7 @@ class App extends Component {
       console.log('logout',authInfo )
       return axios({
         method: 'DELETE',
-        url: 'http://localhost:3000/auth/sign_out',
+        url: 'http://project4backend.herokuapp.com/auth/sign_out',
         headers: JSON.parse(authInfo)
       })
     })

@@ -30,7 +30,7 @@ class FoodList extends React.Component {
     .then((authInfo) => {
       return axios({
         method: 'GET',
-        url: 'http://localhost:3000/foods',
+        url: 'http://project4backend.herokuapp.com/foods',
         headers: JSON.parse(authInfo)
       })
     }).then((response) => {
@@ -47,7 +47,7 @@ class FoodList extends React.Component {
     .then((authInfo) => {
       return axios({
         method: 'POST',
-        url: 'http://localhost:3000/foods',
+        url: 'http://project4backend.herokuapp.com/foods',
         headers: JSON.parse(authInfo),
         data: {
           name: newName,
@@ -69,7 +69,7 @@ class FoodList extends React.Component {
 
   removeFood (id) {
     console.log(`we are gonna delete this food ${id}`)
-    let url = 'http://localhost:3000/foods/' + id
+    let url = 'http://project4backend.herokuapp.com/foods/' + id
     console.log(url)
     localforage.getItem('appName')
     .then((authInfo) => {

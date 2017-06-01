@@ -19,7 +19,7 @@ class FoodMap extends React.Component {
     .then((authInfo) => {
       return axios({
         method: 'GET',
-        url: 'http://localhost:3000/foods/search',
+        url: 'http://project4backend.herokuapp.com/foods/search',
         headers: JSON.parse(authInfo),
         params: { location: searchVal }
       })

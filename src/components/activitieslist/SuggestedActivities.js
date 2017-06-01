@@ -20,7 +20,7 @@ class SuggestedActivities extends React.Component {
     .then((authInfo) => {
       return axios({
         method: 'GET',
-        url: 'http://localhost:3000/activities/meetups',
+        url: 'http://project4backend.herokuapp.com/activities/meetups',
         headers: JSON.parse(authInfo)
       }).then((response) => {
         console.log('response here', response)

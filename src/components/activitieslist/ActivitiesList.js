@@ -25,7 +25,7 @@ class ActivitiesList extends React.Component {
     .then((authInfo) => {
       return axios({
         method: 'GET',
-        url: 'http://localhost:3000/activities',
+        url: 'http://project4backend.herokuapp.com/activities',
         headers: JSON.parse(authInfo)
       })
     }).then((response) => {
@@ -40,7 +40,7 @@ class ActivitiesList extends React.Component {
     .then((authInfo) => {
       return axios({
         method: 'POST',
-        url: 'http://localhost:3000/activities',
+        url: 'http://project4backend.herokuapp.com/activities',
         headers: JSON.parse(authInfo),
         data: { data: newactivity }
       })
@@ -53,7 +53,7 @@ class ActivitiesList extends React.Component {
 
   removeActivity(id) {
     console.log(`we are gonna delete this item ${id}`)
-    let url = 'http://localhost:3000/activities/' + id
+    let url = 'http://project4backend.herokuapp.com/activities/' + id
     console.log(url);
     localforage.getItem('appName')
     .then((authInfo) => {
