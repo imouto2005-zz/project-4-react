@@ -27,15 +27,23 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      redirectLogout: false
+      redirectLogout: false,
+      logout: true
     }
     this.logout = this.logout.bind(this)
+  }
+
+  changeLogin() {
+    this.setState({
+      logout: false
+    })
   }
 
   logout () {
     // You must pass in uid, client, and access-token in the request headers.
     localforage.getItem('appName')
     .then((authInfo) => {
+      console.log('logout',authInfo )
       return axios({
         method: 'DELETE',
         url: 'http://localhost:3000/auth/sign_out',
@@ -45,6 +53,12 @@ class App extends Component {
     .then(() => {
       localforage.removeItem('appName')
       console.log('logged out')
+      this.setState({
+        logout: true
+      })
+
+
+
     })
     .then(() => {
       this.setState({ redirectLogout: true })
@@ -54,6 +68,7 @@ class App extends Component {
 
   render () {
     const { redirectLogout } = this.state
+    console.log(localforage.getItem('appName'))
 
     return (
       <div className='App'>
@@ -63,23 +78,26 @@ class App extends Component {
         </div>
 
         <Router>
-        <div>
-          <div className="auth-div">
+        <div className="auth-div">
           { redirectLogout && <Redirect to='/login' /> }
 
-          { localforage.getItem("appName") === null &&
+          { this.state.logout &&
           <div>
-          <Link to='/login' id='link'><button id="auth-button">Login</button></Link>
+          <Link to='/login' id='link'><button id="auth-button-login">Login</button></Link>
           <Link to='/signup' id='link'><button id="auth-button">Sign Up</button></Link><br />
           </div>
           }
-          </div>
 
+          { this.state.logout == false &&
+          <div class="logout">
           <button id="auth-button-logout" onClick={(e) => this.logout(e)}> Log Out </button>
-          <br /> <br />
+          </div>
+          }
+          <br /><br />
+
           <div>
-          <Route path='/login' component={() => <Login />} />
-          <Route path='/signup' component={() => <Signup />} />
+          <Route path='/login' component={() => <Login changeLogin= {() => this.changeLogin().bind(this) } />} />
+          <Route path='/signup' component={() => <Signup changeLogin= {() => this.changeLogin().bind(this)} />} />
           <Route exact path='/home' component={Home} />
 
           {/* <Route path='/activitieshome' render={() => <ActivitiesHome />} /> */}
@@ -87,11 +105,6 @@ class App extends Component {
           <Route path='/foodhome' render={() => <FoodHome />} />
 
           <Route exact path='/' render={() => <Welcome />} />
-
-
-
-
-          {/* <Route path='/logout' component={() => <Logout />} /> */}
           </div>
         </div>
 

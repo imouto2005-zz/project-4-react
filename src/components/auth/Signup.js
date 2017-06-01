@@ -36,6 +36,7 @@ class Signup extends React.Component {
       })
     })
     .then(() => this.setState({ redirect: true }))
+    .then(() => {this.props.changeLogin()})
     .catch(function (error) {
       console.log(error)
     })
@@ -59,6 +60,10 @@ class Signup extends React.Component {
 
     if (redirect) {
       return <Redirect to='/home' />
+    }
+
+    if (localforage.getItem('appName')) {
+      <Redirect to='/home' />
     }
 
     return (

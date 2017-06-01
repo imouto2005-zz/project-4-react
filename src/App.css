@@ -43,7 +43,7 @@
 }
 
 .auth-div {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 #auth-input {
@@ -67,6 +67,17 @@
   outline: none;
 }
 
+#auth-button-login {
+  border: none;
+  border-radius: 3px;
+  font-family: "Poppins";
+  width: 100px;
+  background: #fba1ef;
+  color: white;
+  outline: none;
+  margin-right: 5px;
+}
+
 #auth-button-logout {
   border: none;
   border-radius: 3px;
@@ -81,6 +92,7 @@
   font-family: "Chelsea Market";
   font-size: 40px;
   color: #20d7ff;
+  margin-top: 0
 }
 
 #login-submit {
@@ -107,6 +119,7 @@
   font-family: "Chelsea Market";
   font-size: 40px;
   color: #87E293;
+  margin-top: 0
 }
 
 #signup-submit {

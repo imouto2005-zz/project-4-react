@@ -33,6 +33,7 @@ class Login extends React.Component {
       }))
     })
     .then(() => this.setState({ redirect: true }))
+    .then(() => {this.props.changeLogin()})
     .catch(function (error) {
       console.log(error)
     })
@@ -56,8 +57,12 @@ class Login extends React.Component {
        return <Redirect to='/home' />
      }
 
+     if (localforage.getItem('appName')) {
+       <Redirect to='/home' />
+     }
+
     return (
-      <div className="auth-div">
+      <div>
         <h2 id="login-header">Welcome back!</h2>
         <img src="http://i.imgur.com/eXvFve8.png" />
         <form onSubmit={(event) => {
