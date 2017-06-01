@@ -7,6 +7,32 @@
   height: 150px;
   padding: 20px;
 }
+.welcome-div {
+  margin-bottom: 50px;
+}
+
+#home-sub {
+  font-family: "Chelsea Market";
+  font-size: 40px;
+  margin-bottom: 0;
+  color: #fcbae0;
+}
+
+#home-caption {
+  font-size: 20px;
+  font-family: "Viga";
+  margin-bottom: 0;
+  /*color: #09e675*/
+}
+
+#doushio {
+  color: #8ac5ff
+}
+
+#emphasis {
+  font-size: 80px;
+  color: #f23742;
+}
 
 #main-header {
   font-size: 50px;
@@ -32,6 +58,16 @@
 }
 
 #auth-button {
+  border: none;
+  border-radius: 3px;
+  font-family: "Poppins";
+  width: 100px;
+  background: #9881F5;
+  color: white;
+  outline: none;
+}
+
+#auth-button-logout {
   border: none;
   border-radius: 3px;
   font-family: "Poppins";

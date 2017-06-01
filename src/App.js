@@ -66,21 +66,27 @@ class App extends Component {
         <div>
           <div className="auth-div">
           { redirectLogout && <Redirect to='/login' /> }
-          <Link to='/login' id='link'><button id="auth-button">Login</button></Link>{' '}
-          <Link to='/signup' id='link'><button id="auth-button">Sign Up</button></Link>{' '}
-          <button id="auth-button" onClick={(e) => this.logout(e)}> Log Out </button>
-          <br /> <br />
+
+          { localforage.getItem("appName") === null &&
+          <div>
+          <Link to='/login' id='link'><button id="auth-button">Login</button></Link>
+          <Link to='/signup' id='link'><button id="auth-button">Sign Up</button></Link><br />
           </div>
+          }
+          </div>
+
+          <button id="auth-button-logout" onClick={(e) => this.logout(e)}> Log Out </button>
+          <br /> <br />
           <div>
           <Route path='/login' component={() => <Login />} />
           <Route path='/signup' component={() => <Signup />} />
           <Route exact path='/home' component={Home} />
 
           {/* <Route path='/activitieshome' render={() => <ActivitiesHome />} /> */}
-          <Route exact path='/activitieshome' component={ActivitiesHome} />
+          <Route path='/activitieshome' component={ActivitiesHome} />
           <Route path='/foodhome' render={() => <FoodHome />} />
 
-          <Route path='/' component={() => <Welcome />} />
+          <Route exact path='/' render={() => <Welcome />} />
 
 
 
