@@ -7,7 +7,7 @@ Doushio will make things easier for you to find a fulfilling (I hope) activity t
 
 BUT WAIT, there's more! Whatever it can do for activities, Doushio can also do FOR FOOD! Now you don't have to look at each other and take turns saying "Where to eat ah?" and "Er anything la you decide".
 
-The app is live [here](http://128.199.214.210/)!
+The app is live [here](128.199.214.210)!
 
 My rails Github repo can be found [here](https://github.com/imouto2005/project-4-rails) as well.
 
@@ -172,6 +172,14 @@ if (this.props.logout) {
 * [Devise Token Auth](https://github.com/lynndylanhurley/devise_token_auth)
 * [Meetup.com API](https://www.meetup.com/meetup_api/)
 * [Google Places API](https://developers.google.com/places/)
+
+### Limitations & Room for improvement
+* API results were not adequate eg. No images, no date and time (it was in a funny string of numbers)
+
+I wanted to do all of these but I had no time :<
+* Flash messages
+* Google Maps API
+* Machine Learning recommender system
 
 ## Acknowledgments
 This project would have been a complete disaster without the help from the following people. I AM SORRY FOR DISTURBING ALL OF YOU :(

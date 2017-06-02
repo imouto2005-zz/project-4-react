@@ -53,6 +53,8 @@ class Login extends React.Component {
     const login = this.login
     const { redirect } = this.state
 
+    console.log("redirect", redirect)
+
      if (redirect) {
        return <Redirect to='/home' />
      }
