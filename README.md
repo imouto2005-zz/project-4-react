@@ -7,7 +7,7 @@ Doushio will make things easier for you to find a fulfilling (I hope) activity t
 
 BUT WAIT, there's more! Whatever it can do for activities, Doushio can also do FOR FOOD! Now you don't have to look at each other and take turns saying "Where to eat ah?" and "Er anything la you decide".
 
-The app is live [here](128.199.214.210)!
+The app is live [here](http://128.199.214.210)!
 
 My rails Github repo can be found [here](https://github.com/imouto2005/project-4-rails) as well.
 
