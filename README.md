@@ -9,7 +9,7 @@ BUT WAIT, there's more! Whatever it can do for activities, Doushio can also do F
 
 The app is live [here](http://128.199.214.210/)!
 
-My rails Github repo can be found [here](https://github.com/imouto2005/project-4-rails) as well!
+My rails Github repo can be found [here](https://github.com/imouto2005/project-4-rails) as well.
 
 ## Development
 
@@ -20,7 +20,9 @@ For this time, due to the more complicated and unfamiliar method of building my 
 ![ERD](http://i.imgur.com/8BuFGkb.png)
 
 ### Notable Areas
-Honestly...THE WHOLE THING.
+Honestly...THE WHOLE THING. It was very challenging for me to switch from doing MVC in one repo to doing MC in one repo and R in another. The React way of doing things was also very new to me and I definitely struggled with that!
+
+![mcr](https://media3.giphy.com/media/w0tItkEcYpqxy/giphy.gif)
 
 #### 1. Connecting the front and backend of the app
 Because I split my project into 2 repos - frontend and backend, there has to be a way to ensure that data could be passed between the two.
