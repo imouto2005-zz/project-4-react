@@ -52,10 +52,10 @@ class Login extends React.Component {
   render () {
     const login = this.login
     const { redirect } = this.state
+    const { logout } = this.props
 
-    console.log("redirect", redirect)
-
-     if (redirect) {
+     if (redirect || logout === false) {
+       console.log('redirecting to home')
        return <Redirect to='/home' />
      }
 

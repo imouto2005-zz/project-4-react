@@ -178,8 +178,10 @@ if (this.props.logout) {
 
 I wanted to do all of these but I had no time :<
 * Flash messages
+* Search and filter function
+* Some kind of loading wheel thing while APIs are being called
 * Google Maps API
-* Machine Learning recommender system
+* Machine learning recommender system
 
 ## Acknowledgments
 This project would have been a complete disaster without the help from the following people. I AM SORRY FOR DISTURBING ALL OF YOU :(

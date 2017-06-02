@@ -10,7 +10,7 @@ class Signup extends React.Component {
       email: '',
       password: '',
       confirm_password: '',
-      redirect: false
+      redirect: this.props.redirectLogin
     }
     this.handleEmailFormOnChange = this.handleEmailFormOnChange.bind(this)
     this.handlePasswordFormOnChange = this.handlePasswordFormOnChange.bind(this)
@@ -57,14 +57,12 @@ class Signup extends React.Component {
   render () {
     const signup = this.signup
     const { redirect } = this.state
+    const { logout } = this.props
 
-    if (redirect) {
-      return <Redirect to='/home' />
-    }
-
-    if (localforage.getItem('appName')) {
-      <Redirect to='/home' />
-    }
+     if (redirect || logout === false) {
+       console.log('redirecting to home')
+       return <Redirect to='/home' />
+     }
 
     return (
       <div className="auth-div">

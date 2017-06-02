@@ -115,8 +115,8 @@ class App extends Component {
           <br /><br />
 
           <div>
-          <Route path='/login' component={() => <Login redirectLogin={this.state.redirectLogin} changeLogin= {() => this.changeLogin().bind(this)} />} />
-          <Route path='/signup' component={() => <Signup changeLogin= {() => this.changeLogin().bind(this)} />} />
+          <Route path='/login' component={() => <Login redirectLogin={this.state.redirectLogin} logout={this.state.logout} changeLogin= {() => this.changeLogin().bind(this)} />} />
+          <Route path='/signup' component={() => <Signup redirectLogin={this.state.redirectLogin} logout={this.state.logout} changeLogin= {() => this.changeLogin().bind(this)} />} />
           <Route exact path='/home' component={() => <Home logout={this.state.logout} /> } />
           </div>
 
