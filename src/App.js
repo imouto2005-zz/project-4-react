@@ -42,7 +42,6 @@ class App extends Component {
   }
 
   logout () {
-    // You must pass in uid, client, and access-token in the request headers.
     localforage.getItem('appName')
     .then((authInfo) => {
       console.log('logout',authInfo )
@@ -60,9 +59,6 @@ class App extends Component {
         logout: true,
         redirectLogin: false
       })
-
-
-
     })
     .then(() => {
       this.setState({ redirectLogout: true })
@@ -115,7 +111,6 @@ class App extends Component {
           <div className="logout">
             <button id="auth-button-logout" onClick={(e) => this.logout(e)}> Log Out </button>
           </div>
-          // Redirect /login, /signup to /home
           }
           <br /><br />
 
